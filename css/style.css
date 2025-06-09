@@ -1,0 +1,251 @@
+/* ===【通用設定】==================== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font-family: sans-serif;
+}
+
+/* 按鈕樣式（共用） */
+.buttons {
+  text-align: center;
+  color: darkgreen;
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: darkgreen;
+  background: transparent;
+  border: 1px solid darkgreen;
+  border-radius: 5px;
+}
+
+
+/* ===【封面頁：可滾動圖片頁面】======= */
+.scrollable-page .center {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.scrollable-page .page-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.scrollable-page .buttons {
+  position: relative;
+  margin-top: 20px;
+}
+
+
+/* ===【影片頁：滿版固定畫面】========= */
+.fixed-video-page,
+.fixed-video-page html {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fixed-video-page .video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.fixed-video-page video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fixed-video-page .buttons {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* ===【熱區互動頁】（可選擇加入）======= */
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0); /* 可點擊但透明 */
+}
+/* === 固定圖片頁（滿版 1920x1080）=== */
+.fixed-image-page,
+.fixed-image-page html {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fixed-image-page .image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.fixed-image-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 導覽按鈕置底 */
+.fixed-image-page .buttons {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* === 熱區（可互動） === */
+.hotspot {
+  position: absolute;
+  top: 40%;      /* 根據圖片內容調整位置 */
+  left: 45%;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  /* 可加以下這行測試熱區位置： */
+  /* background: rgba(255, 0, 0, 0.3); */
+}
+
+    .image-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .main-image, .popup-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .popup-image {
+      display: none;
+      z-index: 2;
+    }
+
+    .popup-image.show {
+      display: block;
+    }
+
+    .back-button {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 3;
+      display: none;
+    }
+
+    .back-button.show {
+      display: block;
+    }
+  .volume-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+}
+/* 基本設定 */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #000;
+  font-family: sans-serif;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 問答框 */
+.question-box {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.question-box h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.question-box button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.question-box button:hover {
+  background-color: #bbb;
+}
+
+/* 上一頁／下一頁按鈕 */
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
