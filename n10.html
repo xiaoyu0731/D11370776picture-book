@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>互動繪本 - 問答頁</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="image-container">
+    <!-- 背景圖片 -->
+    <img src="../繪本/images/11.jpeg" alt="主畫面" class="main-image">
+
+    <!-- 問答框 -->
+    <div class="question-box">
+      <h3>那個是雨嗎！！</h3>
+      <button onclick="checkAnswer('A')">A. 雨</button>
+      <button onclick="checkAnswer('B')">B. 鳥便便</button>
+      <button onclick="checkAnswer('C')">C. 孫悟空的金箍棒</button>
+    </div>
+
+    <!-- 導覽按鈕 -->
+    <div class="buttons">
+      <button onclick="location.href='n9.html'">上一頁</button>
+      <button onclick="location.href='n11.html'">下一頁</button>
+    </div>
+  </div>
+
+  <!-- 背景音樂 -->
+  <audio autoplay loop hidden id="bgm">
+    <source src="music/bgm.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function checkAnswer(choice) {
+      if (choice === 'B') {
+        alert("答對了！你真聰明！");
+      } else {
+        alert("再想想看 ");
+      }
+    }
+  </script>
+</body>
+</html>
+ 
+    
+ 
