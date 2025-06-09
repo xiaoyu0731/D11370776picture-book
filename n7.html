@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="fixed-image-page">
+<head>
+  <meta charset="UTF-8">
+  <title>第三頁 - 圖片互動</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="image-container">
+    <!-- 滿版圖片 -->
+       <div class="image-container" onclick="showPopup()">
+    <!-- 主畫面圖 -->
+    <img src="../繪本/images/8.jpeg" alt="主畫面" class="main-image">
+
+    <!-- 點擊後出現的互動圖片 -->
+    <img src="../繪本/images/toto.jpeg" alt="互動圖片" class="popup-image" id="popupImage">
+
+    <!-- 返回主畫面按鈕 -->
+    <button class="back-button" id="backButton" onclick="hidePopup(event)">返回主畫面</button>
+  </div>
+
+  <script>
+    function showPopup() {
+      document.getElementById('popupImage').classList.add('show');
+      document.getElementById('backButton').classList.add('show');
+    }
+
+    function hidePopup(event) {
+      event.stopPropagation(); // 避免點擊返回鍵又觸發 showPopup
+      document.getElementById('popupImage').classList.remove('show');
+      document.getElementById('backButton').classList.remove('show');
+    }
+  </script>
+  <div class="buttons">
+      <button onclick="location.href='n6.html'">上一頁</button>
+      <button onclick="location.href='n8.html'">下一頁</button>
+    </div>
+  <audio autoplay loop hidden>
+    <source src="../繪本/vo/55.mp3" type="audio/mpeg">
+  </audio>
+   
+</body>
+</html>
+
+    
+ 
